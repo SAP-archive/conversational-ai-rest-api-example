@@ -1,0 +1,21 @@
+#conf
+dataset_translation/settings/development.py
+*.pyc
+
+# Ignore test-related files
+.coverage*
+
+#dataset
+*.json
+*.tsv
+
+#ide
+.idea
+
+#.DS_Store
+.DS_Store
+#venv
+/venv
+
+#python
+__pycache__

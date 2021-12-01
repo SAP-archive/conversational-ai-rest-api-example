@@ -1,0 +1,17 @@
+# Whitesource and PPMS workarounds to avoid conflicts
+requests==2.25.1
+requests_toolbelt==0.9.1
+
+# Utils
+regex==2020.1.8
+Unidecode==1.1.1
+tqdm==4.54.0
+
+# Linting
+pylint==2.7.0
+
+# Testing
+pytest==4.4.0
+mock==2.0.0
+
+setuptools==41.0.0

@@ -1,0 +1,17 @@
+general:
+  gitSshKeyCredentialsId: 'SSH_github'
+  scanType: 'pip'
+  verbose: true
+steps:
+  artifactPrepareVersion:
+    versioningType: 'library'
+    buildTool: 'pip'
+    tagPrefix: ''
+  executeBuild:
+    xMakeShipmentType: 'indirectshipment'
+    xMakeBuildQuality: 'Release'
+  writeInflux:
+    influxServer: 'jenkins'
+    wrapInNode: true
+  sendNotificationMail:
+    wrapInNode: true

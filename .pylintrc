@@ -1,0 +1,74 @@
+[MASTER]
+# Use multiple processes to speed up Pylint.
+jobs=4
+
+# Pickle collected data for later comparisons.
+persistent=yes
+
+# List of plugins (as comma separated values of python modules names) to load,
+# usually to register additional checkers.
+# load-plugins=
+
+[MESSAGES CONTROL]
+
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifiers separated by comma (,) or put this
+# option multiple times (only on the command line, not in the configuration
+# file where it should appear only once).You can also use "--disable=all" to
+# disable everything first and then reenable specific checks. For example, if
+# you want to run only the similarities checker, you can use "--disable=all
+# --enable=similarities". If you want to run only the classes checker, but have
+# no Warning level messages displayed, use"--disable=all --enable=classes
+# --disable=W"
+#
+# Here are the WHYs:
+# fixme: should not be an error
+# missing-docstring: no granularity (module, classes, and methods are all flagged with this error)
+# too-few-public-methods: whaaat ?
+# too-many-public-methods: same as above
+# too-many-instance-attributes: same as above
+# len-as-condition: currently a bug in pylint TODO: remove once pylint 2.4.0 is shipped
+# import-error: avoid errors when running tests/lint without the deps installed (too expensive to install all deps everytime)
+# arguments-differ: allow addition of optional parameters to abstract methods
+# line-too-long: long lines are often more friendly (e.g. nested list comprehension)
+
+disable=fixme,missing-docstring,too-few-public-methods,too-many-public-methods,len-as-condition,import-error,arguments-differ,line-too-long,too-many-instance-attributes
+
+[TYPECHECK]
+
+# List of members which are set dynamically and missed by Pylint inference
+# Especially `torch` brings several issues around linting. It doesn't recognize callables such as `torch.tensor`
+generated-members=numpy.*, torch.*
+ignored-modules=numpy,torch
+ignored-classes=numpy,torch
+
+[DESIGN]
+
+# Maximum number of arguments for function / method
+max-args=10
+
+[FORMAT]
+
+# Maximum number of characters on a single line.
+max-line-length=120
+
+# Maximum number of lines in a module
+max-module-lines=500
+
+# String used as indentation unit. This is usually " " (4 spaces) or "\t" (1
+# tab).
+indent-string='  '
+
+# Number of spaces of indent required inside a hanging or continued line.
+indent-after-paren=2
+
+# Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
+expected-line-ending-format=LF
+
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=x,y,i,j,k,ex,_
+
+# Bad variable names which should always be refused, separated by a comma
+bad-names=foo,bar,baz,toto,tutu,tata,data,qwe,aze

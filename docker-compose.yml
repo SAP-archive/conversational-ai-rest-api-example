@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  test:
+    image: "docker.wdf.sap.corp:50001/com.sap.cai/python-dev:1.0.1-20200924171216"
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALL: en_US.UTF-8
+    volumes:
+      - ./:/usr/src/app
+    command:
+      - bash
+      - -l
+      - -c
+      - |
+        pip install Cython==0.29.6
+        pip install -r ./requirements.txt
+        pytest tests --junitxml=reports/junit.xml --cov . --cov-config .coveragerc --cov-report term-missing --cov-report html --cov-report xml

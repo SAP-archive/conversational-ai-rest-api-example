@@ -1,0 +1,9 @@
+version: '3.7'
+volumes:
+  pip_cache:
+  bin_cache:
+services:
+  test:
+    volumes:
+      - pip_cache:/usr/local/lib/python3.6/site-packages
+      - bin_cache:/usr/local/bin
