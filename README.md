@@ -21,7 +21,7 @@ Then it's necessary to install some Python libraries :
 > pip install -r requirements.txt
 ```
 
-## Usage
+### Usage
 
 Basic generation :
 ```
@@ -52,7 +52,7 @@ If you’d like to save the translated JSON dataset on a CAI-format, you can add
 > python3 ./bin/translate.py -p PATH -a API -s SOURCE_LANG -t TARGET_LANG -user USER_SLUG -bot BOT_SLUG -version VERSION_SLUG -devtoken DEV_TOKEN -botid BOT_ID -botsecret BOT_SECRET -id CLIENT_ID -secret CLIENT_SECRET -save
 ```
 
-## Input and output formats
+### Input and output formats
 Example of a JSON dataset exported from the CAI platform, as input :
 ```
 {
