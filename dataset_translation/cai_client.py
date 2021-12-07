@@ -19,7 +19,7 @@ class CaiClient:
                       'Content': 'application/json',
                       'X-Token': 'Token ' + developer_token
                    }
-    self.url_prefix = f"https://api.cai.tools.sap/train/v2/users/{user_slug}/bots/{bot_slug}/versions/{version_slug}/dataset"
+    self.url_prefix = f"https://cai.tools.sap/api/train/v2/users/{user_slug}/bots/{bot_slug}/versions/{version_slug}/dataset"
     self.list_entities = self.get_entities()
 
   @staticmethod

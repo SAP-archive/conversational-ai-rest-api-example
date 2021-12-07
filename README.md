@@ -1,5 +1,7 @@
 # Conversational AI Rest API Example using SAP Translation Hub
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/conversational-ai-rest-api-example)](https://api.reuse.software/info/github.com/SAP-samples/conversational-ai-rest-api-example)
+
 ## Description
 This project is a concrete scenario showing a broad spectrum of REST APIs use cases for Conversational AI. <br/>
 This is an example use of SAP Conversational AI and SAP Translation Hub REST APIs in order to help translating a dataset on the CAI platform. <br/>
